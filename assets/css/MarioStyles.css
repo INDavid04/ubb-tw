@@ -1,0 +1,21 @@
+body {
+  background-color: #000;
+  color: wheat;
+  color: #049c08;
+}
+
+h1 {
+  color: #e52521;
+}
+
+h2 {
+  color: #fbd000;
+}
+
+* {
+  text-align: center !important;
+}
+
+table {
+  margin: 0 auto;
+}/*# sourceMappingURL=MarioStyles.css.map */

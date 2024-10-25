@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: darkslategrey;
+  color: wheat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  display: inline-block;
+  margin: 0.5rem 0;
+  min-height: 1ch;
+  padding: 0.5rem;
+  background-color: yellowgreen;
+  color: darkslategrey;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  background-color: wheat;
+  color: darkslategrey;
+  color: darsla;
+  transition: 0.2s;
+}
+
+header, main, footer {
+  padding: 0 1rem;
+}
+
+header {
+  border-bottom: 4px solid wheat;
+  padding-bottom: 1rem;
+}
+
+footer {
+  padding: 1rem;
+  background-color: midnightblue;
+  text-align: center;
+}
+
+#title {
+  padding: 1rem;
+  background-color: wheat;
+  color: darkslategrey;
+  text-align: center;
+  letter-spacing: 0.8rem;
+}
+
+nav a {
+  background-color: unset;
+  color: yellowgreen;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+}
+
+.Memory {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background-color: black;
+}
+
+.NESIframe {
+  max-width: 100%;
+  width: 80vw;
+  height: 40vw;
+}
+
+h3 {
+  border-top: 4px solid wheat;
+  border-left: 4px solid wheat;
+  border-right: 4px solid wheat;
+  padding: 0.8rem;
+}
+
+ol li {
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+
+iframe {
+  width: 100%;
+  max-width: 100rem;
+  aspect-ratio: 1.8;
+  margin-bottom: 2rem;
+}/*# sourceMappingURL=styles.css.map */
