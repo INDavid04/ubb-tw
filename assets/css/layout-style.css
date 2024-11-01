@@ -4,38 +4,52 @@ a completa regulile CSS de mai jos.
 */
 
 body {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    /* grid-template-rows:  ? 5fr ?;
-    grid-template-areas: ? 
-                     ?
-                         ?; */
-  }
-  
-  main {
+    grid-template-rows:  1fr 5fr 1fr;
+    grid-template-areas: "a b c";
+}
+
+main {
     display: grid;
-    /* grid-template-columns: ? 4fr ?;
-    grid-template-areas: "? ? ?" */
-  }
-  
-  main > nav, 
-  main > aside {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "d e f";
+    grid-area: b;
+    height: 50vh;
+}
+
+main > nav, 
+main > aside {
     background: #FAF4B7;
-  }
-  
-  header {
+}
+
+header {
     background: #CDF0EA;
-  }
-  
-  article {
+    grid-area: a;
+    height: 15vh;
+}
+
+nav {
+    grid-area: d;
+}
+
+article {
+    grid-area: e;
     background: #F9F9F9;
-  }
-  
-  footer {
+}
+
+aside {
+    grid-area: f;
+}
+
+footer {
     background: #F6C6EA;
-  }
-  
-  header, footer, article, nav, aside {
+    grid-area: c;
+    height: 15vh;
+}
+
+header, footer, article, nav, aside {
     padding: 1em;
-  }
+}
