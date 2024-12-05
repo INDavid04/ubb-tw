@@ -24,3 +24,8 @@ h3 { border-top: 4px solid wheat; border-left: 4px solid wheat; border-right: 4p
 ol li { margin-left: 1rem; padding: 0.5rem; }
 
 iframe { width: 100%; max-width: 100rem; aspect-ratio: 1.8; margin-bottom: 2rem; }
+
+
+// draw.js
+td { border: 1px solid darkgray; width: 12px; height: 12px; background-color: whitesmoke; }
+.DrawBody { display: flex; justify-content: center; align-items: center; min-height: 100vh; }

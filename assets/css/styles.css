@@ -86,4 +86,18 @@ iframe {
   max-width: 100rem;
   aspect-ratio: 1.8;
   margin-bottom: 2rem;
+}
+
+td {
+  border: 1px solid darkgray;
+  width: 12px;
+  height: 12px;
+  background-color: whitesmoke;
+}
+
+.DrawBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }/*# sourceMappingURL=styles.css.map */
