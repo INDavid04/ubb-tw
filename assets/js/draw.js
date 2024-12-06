@@ -3,19 +3,20 @@ function drawTable(nrows, ncols) {
        1. Generați un tabel cu 'nrows' rânduri și 'ncols' coloane 
        și adăugați-l în div-ul cu id-ul 'container'. 
     */
-    let container = document.querySelector('#container')
-    let tbl = document.createElement('table')
-    tbl.setAttribute('id', 'myTable')
+    let container = document.querySelector('#container');
+    let tbl = document.createElement('table');
+    tbl.setAttribute('id', 'myTable');
     for (let i = 0; i < nrows; i++) {
-        let tr = document.createElement('tr')
+        let tr = document.createElement('tr');
+        tr.setAttribute('id', 'row' + i);
         for (let j = 0; j < ncols; j++) {
-            let cell = document.createElement('td')
-            cell.classList.add('r' + i, 'c' + j)
-            tr.appendChild(cell)
+            let cell = document.createElement('td');
+            cell.classList.add('r' + i, 'c' + j);
+            tr.appendChild(cell);
         }
-        tbl.appendChild(tr)
+        tbl.appendChild(tr);
     }
-    container.appendChild(tbl)
+    container.appendChild(tbl);
 }
     
 function colorCol(column, color) {
@@ -24,7 +25,7 @@ function colorCol(column, color) {
     */
     let elements = document.getElementsByClassName('c' + column) /* elements pentru ca avem un array */
     for (let i = 0; i < elements.length; i++) {
-        elements[i].style.backgroundColor = color
+        elements[i].style.backgroundColor = color;
     }
 }
 
@@ -32,9 +33,9 @@ function colorRow(row, color) {
     /*
         2. Colorați rândul 'row' din tabla de desenat cu culoarea 'color'.
     */
-   let elements = document.getElementsByClassName('r' + row)
+   let elements = document.getElementsByClassName('r' + row);
    for (let i = 0; i < elements.length; i++) {
-        elements[i].style.backgroundColor = color
+        elements[i].style.backgroundColor = color;
    }
 }
 
@@ -103,12 +104,12 @@ function drawLine(r1, c1, r2, c2, color) {
     // }
     if (r1 === r2) {
         for (let i = c1; i <= c2; i++) {
-            drawPixel(r1, i, color)
+            drawPixel(r1, i, color);
         }
     }
     if (c1 == c2) {
         for (let i = r1; i <= r2; i++) {
-            drawPixel(i, c1, color)
+            drawPixel(i, c1, color);
         }
     }
 }
@@ -126,28 +127,41 @@ function drawRect(r1, c1, r2, c2, color) {
    }
 }
 
-function drawPixelExt(row, col, color) {
+function drawPixelExt(row, col, color, rows, cols) {
     /*
         8. Colorați celula de la linia 'row' și coloana 'col' cu culoarea 'color'.
         Dacă celula nu există, extindeți tabla de desenat în mod corespunzător.
     */
-    if (row < 20 && col < 20) {
+    if (row < rows && cols < 20) {
         drawPixel(row, col, color);
     } else {
-        plus_row = row - 20;
-        plus_col = col - 20;
+        plus_row = row - rows;
+        plus_col = col - cols;
         console.log(`Extindem cu ${plus_row} randuri si ${plus_col} coloane!`);
         let tbl = document.querySelector('table');
-        for (let i = 0; i < plus_row; i++) {
-            let tr = document.createElement('tr')
-            for (let j = 0; j < plus_col; j++) {
-                let cell = document.createElement('td')
+        // Extindem in dreapta cu plus_col coloane
+        for (let i = 0; i < rows; i++) {
+            let tr = document.getElementById('row' + i);
+            for (let j = cols; j < cols + plus_col; j++) {
+                let cell = document.createElement('td');
                 cell.classList.add('r' + i, 'c' + j);
-                tr.appendChild(cell)
+                tr.appendChild(cell);
             }
-            tbl.appendChild(tr)
         }
-        container.appendChild(tbl)
+        // Extindem in jos cu plus_row randuri si 20+plus_col coloane
+        for (let i = rows; i < rows + plus_row; i++) {
+            console.log('intra')
+            let tr = document.createElement('tr');
+            tr.classList.add('row' + i);
+            for (let j = 0; j < cols + plus_col; j++) {
+                let cell = document.createElement('td');
+                cell.classList.add('r' + i, 'c' + j);
+                tr.appendChild(cell);
+            }
+            tbl.appendChild(tr);
+        }
+        container.appendChild(tbl);
+        drawPixel(row - 1, col - 1, color);
     }
 }
 
@@ -239,9 +253,9 @@ function smear(row, col, amount) {
 
 
 window.onload = function(){
-    const rows = 1;
-    const cols = 15;	
-    drawTable(20, 20);
+    const rows = 20;
+    const cols = 20;	
+    drawTable(rows, cols);
     // colorCol(10, "red");
     // colorRow(4, "brown");
     // rainbow("col");
@@ -250,5 +264,5 @@ window.onload = function(){
     // drawPixel(4, 7, 'yellow');
     // drawLine(1, 4, 1, 7, 'blue');
     // drawRect(1, 5, 4, 10, 'green');
-    drawPixelExt(40, 50, 'magenta');
+    drawPixelExt(40, 50, 'magenta', rows, cols);
 }
