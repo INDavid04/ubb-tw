@@ -12,6 +12,7 @@ function drawTable(nrows, ncols) {
         for (let j = 0; j < ncols; j++) {
             let cell = document.createElement('td');
             cell.classList.add('r' + i, 'c' + j);
+            cell.addEventListener('click', clickCellListener);
             tr.appendChild(cell);
         }
         tbl.appendChild(tr);
@@ -137,7 +138,7 @@ function drawPixelExt(row, col, color, rows, cols) {
     } else {
         plus_row = row - rows;
         plus_col = col - cols;
-        console.log(`Extindem cu ${plus_row} randuri si ${plus_col} coloane!`);
+        // console.log(`Extindem cu ${plus_row} randuri si ${plus_col} coloane!`);
         let tbl = document.querySelector('table');
         // Extindem in dreapta cu plus_col coloane
         for (let i = 0; i < rows; i++) {
@@ -150,7 +151,6 @@ function drawPixelExt(row, col, color, rows, cols) {
         }
         // Extindem in jos cu plus_row randuri si 20+plus_col coloane
         for (let i = rows; i < rows + plus_row; i++) {
-            console.log('intra')
             let tr = document.createElement('tr');
             tr.classList.add('row' + i);
             for (let j = 0; j < cols + plus_col; j++) {
@@ -251,6 +251,13 @@ function smear(row, col, amount) {
     */
 }
 
+function clickCellListener (event) {
+    row = this.classList[0].slice(1);
+    col = this.classList[1].slice(1);
+    let color = document.getElementById('picker').value;
+    // console.log(color);
+    drawPixel(row, col, color);
+}
 
 window.onload = function(){
     const rows = 20;
