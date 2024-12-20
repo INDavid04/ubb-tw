@@ -7,12 +7,151 @@
       <script type="text/javascript" src="./assets/js/form.js"></script>
    </head>
    <body>
-     <h3>FORMULAR PENTRU INTRAREA ÎN SISTEMUL SOLAR</h3>
+      <h3>FORMULAR PENTRU INTRAREA ÎN SISTEMUL SOLAR</h3>
       
-     <div id="container"> 
-        <form action="Earth" method="post"></form>
-       <form >
-       </form>
-     </div>
+      <div id="container"> 
+         <form target="_self" action="Earth" method="post">
+            <fieldset>
+               <legend>Date personale</legend>
+               <div>
+                  <label for="nume">Nume complet</label>
+                  <input type="text" name="nume" id="nume" required minlength="3" maxlength="30">
+               </div>
+               <div>
+                  <label for="nume">ID Unic</label>
+                  <input type="text" name="idunic" id="idunic" required minlength="8" maxlength="20" pattern="[0-9a-z]+$">
+               </div>
+               <div>
+                  <label for="rasa">Rasa:</label>
+                  <select name="rasa" id="rasa">
+                     <option value="">--Please choose an option--</option>
+                     <option value="Autobot">Autobot</option>
+                     <option value="Daimons">Daimons</option>
+                     <option value="Deep-Ones">Deep Ones</option>
+                     <option value="Experiment">Experiment</option>
+                     <option value="Goa'uld">Goa'uld</option>
+                     <option value="Hutt">Hutt</option>
+                     <option value="Jawa">Jawa</option>
+                     <option value="Kryptonian">Kryptonian</option>
+                     <option value="Mandalorians">Mandalorians</option>
+                     <option value="Rodian">Rodian</option>
+                     <option value="Romulan">Romulan</option>
+                     <option value="Tleilaxu">Tleilaxu</option>
+                     <option value="Vogon">Vogon</option>
+                     <option value="Wookie">Wookie</option>
+                     <option value="Xenu">Xenu</option>
+                     <option value="Yeti">Yeti</option>
+                     <option value="Zerg">Zerg</option>
+                  </select>
+               </div>
+               <div>
+                  <label for="data">Data nasterii:</label>
+                  <input type="date" name="data" id="data" min="1800-01-01" max="2024-12-31" value="2024-12-20" required>
+               </div>
+               <div>
+                  <label for="credit">Credit social:</label>
+                  <input type="range" name="credit" id="credit" min="0" max="2000" step="50" list="values">
+                  <span id="value">output</span>
+                  <datalist id="values">
+                     <option value="0" label="0"></option>
+                     <option value="500" label="500"></option>
+                     <option value="1000" label="1000"></option>
+                     <option value="1500" label="1500"></option>
+                     <option value="2000" label="2000"></option>
+                  </datalist>
+               </div>
+               <div>
+                  <label for="foto">Fotografie:</label>
+                  <input type="file" name="foto" id="foto" accept="image/*">
+               </div>
+            </fieldset>
+            <fieldset>
+               <legend>Contact</legend>
+               <div>
+                  <label for="galaxie-provenienta">Galaxie provenienta:</label>
+                  <input type="text" name="galaxie-provenienta" id="galaxie-provenienta" required>
+               </div>
+               <div>
+                  <label for="planeta-provenienta">Planeta provenienta:</label>
+                  <input type="text" name="planeta-provenienta" id="planeta-provenienta" required>
+               </div>
+               <div>
+                  <label for="adresa-provenienta">Adresa provenienta:</label>
+                  <textarea name="adresa-provenienta" id="adresa-provenienta" resize="none" rows="4" cols="20" required></textarea>
+               </div>
+               <div>
+                  <label for="telefon">Telefon:</label>
+                  <input type="tel" name="telefon" id="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                  <br>
+                  <small>(Format intergalactic)</small>
+               </div>
+               <div>
+                  <label for="email">E-mail:</label>
+                  <input type="email" name="email" id="email" required>
+               </div>
+               <div>
+                  <label for="web-url">Web URL:</label>
+                  <input type="text" placeholder="https://example.com" pattern="[a-z]@[a-z].[a-z]" required>
+               </div>
+            </fieldset>
+            <fieldset>
+               <legend>Semnalmente fizice</legend>
+               <div>
+                  <label for="inaltime">Inaltime (10-300cm):</label>
+                  <input type="number" name="inaltime" id="inaltime" min="10" max="300" required>
+               </div>
+               <div>
+                  <label for="greutate">Greutate (1-500kg):</label>
+                  <input type="number" name="greutate" id="greutate" min="1" max="500" required>
+               </div>
+               <div>
+                  <label for="nr-membre">Nr. membre:</label>
+                  <input type="number" name="nr-membre" id="nr-membre" min="1" required>
+               </div>
+               <div>
+                  <label for="nr-ochi">Nr. ochi:</label>
+                  <input type="number" name="nr-ochi" id="nr-ochi" min="1" required>
+               </div>
+               <div>
+                  <label for="culoare">Culoare:</label>
+                  <input type="color" name="culoare" id="culoare">
+               </div>
+            </fieldset>
+            <fieldset>
+               <legend>Vizita</legend>
+               <div>
+                  <label for="data-sosire">Data sosire</label>
+                  <input type="date" name="data-sosire" id="data-sosire" min="2024-05-13" max="2034-05-13" value="2024-05-13" required>
+               </div>
+               <div>
+                  <label for="ora-estimata">Tim estimat sosire:</label>
+                  <input type="time" name="" id="">
+               </div>
+               <div>
+                  <label for="tip-sedere">Tip sedere:</label>
+                  <input type="radio" name="tip-sedere" id="temporara" checked>
+                  <span>Temporara</span>
+                  <input type="radio" name="tip-sedere" id="permanenta">
+                  <span>Permanenta</span>
+               </div>
+               <div>
+                  <label for="scop-vizita">Scopul vizitei:</label>
+                  <input type="checkbox" name="scop-vizita" id="scop-vizita" checked>
+                  <span>Invazie</span>
+                  <input type="checkbox" name="scop-vizita" id="scop-vizita">
+                  <span>Afaceri</span>
+                  <input type="checkbox" name="scop-vizita" id="scop-vizita">
+                  <span>Turism</span>
+                  <input type="checkbox" name="scop-vizita" id="scop-vizita">
+                  <span>Solcial</span>
+                  <input type="checkbox" name="scop-vizita" id="scop-vizita">
+                  <span>Altul</span>
+               </div>
+            </fieldset>
+            <input type="submit" value="Trimite cerere!">
+         </form>
+         <form>
+         </form>
+      </div>
    </body>
 </html>
