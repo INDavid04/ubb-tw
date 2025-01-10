@@ -263,13 +263,13 @@ window.onload = function(){
     const rows = 20;
     const cols = 20;	
     drawTable(rows, cols);
-    // colorCol(10, "red");
-    // colorRow(4, "brown");
-    // rainbow("col");
-    // let cont = document.getElementById('container');
-    // console.log(getNthChild(cont, 2));
-    // drawPixel(4, 7, 'yellow');
-    // drawLine(1, 4, 1, 7, 'blue');
-    // drawRect(1, 5, 4, 10, 'green');
+    colorCol(10, "red");
+    colorRow(4, "brown");
+    rainbow("col");
+    let cont = document.getElementById('container');
+    console.log(getNthChild(cont, 2));
+    drawPixel(4, 7, 'yellow');
+    drawLine(1, 4, 1, 7, 'blue');
+    drawRect(1, 5, 4, 10, 'green');
     drawPixelExt(40, 50, 'magenta', rows, cols);
 }

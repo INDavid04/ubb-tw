@@ -10,25 +10,25 @@ function keyDownListener(event) {
         case 'ArrowDown':
             let currentMarginDown = parseInt(window.getComputedStyle(image).getPropertyValue('margin-top'));
             if (currentMarginDown - 10 > vizorHeight - height) {
-                image.style.marginTop = currentMarginDown - 10 + 'px';
+                image.style.marginTop = parseInt(window.getComputedStyle(image).getPropertyValue('margin-top')) - 10 + 'px';
             }
             break;
         case 'ArrowUp':
-            let currentMarginUp = parseInt(window.getComputedStyle(image).getPropertyValue('margin-bottom'));
-            if (currentMarginUp - 10 > vizorHeight - height) {
-                image.style.marginTop = currentMarginUp - 10 + 'px';
-            }
-            break;
-        case 'ArrowLeft':
-            let currentMarginLeft = parseInt(window.getComputedStyle(image).getPropertyValue('margin-right'));
-            if (currentMarginLeft - 10 > vizorWidth - height) {
-                image.style.marginTop = currentMarginLeft - 10 + 'px';
+            let currentMarginUp = parseInt(window.getComputedStyle(image).getPropertyValue('margin-top'));
+            if (currentMarginUp < 0) {
+                image.style.marginTop = parseInt(window.getComputedStyle(image).getPropertyValue('margin-top')) + 10 + 'px';
             }
             break;
         case 'ArrowRight':
             let currentMarginRight = parseInt(window.getComputedStyle(image).getPropertyValue('margin-left'));
-            if (currentMarginRight - 10 > vizorWidth - height) {
-                image.style.marginTop = currentMarginRight - 10 + 'px';
+            if (currentMarginRight - 10 > vizorWidth - width) {
+                image.style.marginLeft = parseInt(window.getComputedStyle(image).getPropertyValue('margin-left')) - 10 + 'px';
+            }
+            break;
+        case 'ArrowLeft':
+            let currentMarginLeft = parseInt(window.getComputedStyle(image).getPropertyValue('margin-left'));
+            if (currentMarginLeft < 0) {
+                image.style.marginLeft = parseInt(window.getComputedStyle(image).getPropertyValue('margin-left')) + 10 + 'px';
             }
             break;
         case '=':

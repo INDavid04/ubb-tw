@@ -10,8 +10,6 @@ function setStyle() {
 }
 
 window.onload = function() {  
-   /* Adăugați cod pentru schimbarea culorii de fundal și pentru eticheta cu valoarea creditului social */
-   
    // Eticheta cu valoarea creditului social
    const value = document.querySelector("#value");
    const input = document.querySelector("#credit");
@@ -20,7 +18,7 @@ window.onload = function() {
       value.textContent = event.target.value;
    })
 
-   // schimbarea culorii de fundal
+   // Schimbarea culorii de fundal
    if (!localStorage.getItem("bgcolor")) {
       populateStorage();
    } else {

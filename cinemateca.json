@@ -1,0 +1,58 @@
+{
+    "film": [
+      {
+        "gen": "drama",
+        "titlu": "The war within",
+        "regizor": "Brett Varvel",
+        "producator": "Brett Varvel",
+        "scenarist": [
+          "Brett Varvel",
+          "Gary Varvel",
+          "Rebecca Reid"
+        ],
+        "an": "2014",
+        "actor": [
+          "Brett Varvel",
+          "Gary Varvel",
+          "Rebecca Reid"
+        ],
+        "scor": "5"
+      },
+      {
+        "gen": "comedie",
+        "titlu": "Nume1",
+        "regizor": "Nume 1",
+        "producator": "Nume 1",
+        "scenarist": [
+          "Nume 1",
+          "Nume 1",
+          "Nume 1"
+        ],
+        "an": "1999",
+        "actor": [
+          "Nume 1",
+          "Nume 1",
+          "Nume 1"
+        ],
+        "scor": "5"
+      },
+      {
+        "gen": "comedie",
+        "titlu": "Nume 2",
+        "regizor": "Nume 2",
+        "producator": "Nume 2",
+        "scenarist": [
+          "Nume 2",
+          "Nume 2",
+          "Nume 2"
+        ],
+        "an": "1999",
+        "actor": [
+          "Nume 2",
+          "Nume 2",
+          "Nume 2"
+        ],
+        "scor": "5"
+      }
+    ]
+  }
