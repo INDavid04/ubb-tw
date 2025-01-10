@@ -60,3 +60,10 @@ let tr = document.createElement('tr');
 let td = document.createElement('td');
 tr.appendChild(td);
 ```
+
+### Porneste server cu python
+```
+// Trebuie sa fim in acelasi folder cu fisierul json
+$ cd ./unde-am-fisierul-json
+$ python3 -m http.server
+```

@@ -76,4 +76,14 @@ window.onload = function() {
     console.log(json);
 
     console.log(JSON.stringify(json, null, 2));
+
+    // Afisam numele fiecarui titlu in pagina
+    const content = document.getElementById("content");
+    const ul = document.createElement("ul")
+    for (const film of json.film) {
+        const li = document.createElement("li");
+        li.innerText = film.titlu;
+        ul.appendChild(li);
+    }
+    content.appendChild(ul);
 }
