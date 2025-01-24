@@ -47,7 +47,7 @@ function valid() {
 }
 // alert(valid());
 
-//8/ Dacă poziția introdusă de jucător nu este validă, trebuie să afișați un mesaj de atenționare și să repetați pasul 6. Dacă poziția este validă, adăugați semnul jucătorului în tabla de joc și repetați pasul 6.
+// 8/ Dacă poziția introdusă de jucător nu este validă, trebuie să afișați un mesaj de atenționare și să repetați pasul 6. Dacă poziția este validă, adăugați semnul jucătorului în tabla de joc și repetați pasul 6.
 while (valid()) {
     if (valid() === true) {
         tabla[pozitie - 1] = semn;
