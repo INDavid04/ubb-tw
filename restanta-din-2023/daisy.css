@@ -1,0 +1,43 @@
+html {
+ height: 100%;
+}
+
+body {
+ background-color: #92cdef;
+ height: 100%;
+}
+
+.rotateright {
+  animation: rotateright 1s infinite linear;
+}
+
+.rotateleft {
+  animation: rotateleft 1s infinite linear;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+#flower-count{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 5px;
+
+}
+
+@keyframes rotateright {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateleft {
+  100% {
+    transform: rotate(-360deg);
+  }
+}

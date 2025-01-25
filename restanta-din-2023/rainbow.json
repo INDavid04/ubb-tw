@@ -1,0 +1,7 @@
+[
+  {"name":"red", "code":"#E50000", "meaning":"life", "r":"229", "g":"0","b":"0"},
+  {"name":"orange", "code":"#FF8D00", "meaning":"healing", "r":"255", "g":"141","b":"0"},
+  {"name":"yellow", "code":"#FFEE00", "meaning":"sunlight", "r":"255", "g":"238","b":"0"},
+  {"name":"green", "code":"#028121", "meaning":"nature", "r":"2", "g":"129","b":"33"},
+  {"name":"blue", "code":"#004CFF", "meaning":"harmony", "r":"0", "g":"76","b":"255"},
+  {"name":"violet", "code":"#770088", "meaning":"spirit", "r":"119", "g":"0","b":"136"}]
