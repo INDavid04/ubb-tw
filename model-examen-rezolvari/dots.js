@@ -13,8 +13,7 @@ window.onload = function(){
   document.body.appendChild(range);
    
   function clickondot(event) {
-  
-  let thedot = document.createElement('div');
+    let thedot = document.createElement('div');
     // make it a circle
     thedot.style.borderRadius = "50%";
     
