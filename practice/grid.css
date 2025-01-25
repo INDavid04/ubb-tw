@@ -1,0 +1,46 @@
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, [col] 250px);
+    grid-template-rows: repeat(2, [row] auto);
+    gap: 10px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: min-content;
+    background-color: white;
+    font-size: 150%;
+}
+#wrapper div {
+    padding: 20px;
+}
+
+div {
+    background-color: black;
+}
+
+.a, .b, .c, .d {
+    border: 2px dashed white;
+}
+
+.d {
+    display: grid;
+    grid-template-columns: repeat(2, [col] 1fr);
+    grid-template-rows: repeat(2, [row] auto);
+    gap: 10px;
+}
+
+.d div {
+    background-color: pink;
+    color: black;
+}
+
+.e {
+    grid-column: span 2;
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+    #wrapper {
+        display: inline;
+        padding: 0;
+        background-color: black;
+    }
+}

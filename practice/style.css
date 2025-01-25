@@ -1,0 +1,67 @@
+:root {
+  --background: #000;
+  --text: #faebd7;
+  --cta: #ff6500;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: antiquewhite;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: var(--cta);
+  font-weight: bold;
+  transition: 0.125s ease-in;
+}
+
+a:focus, a:hover {
+  color: var(--background);
+  border-radius: 1rem;
+  background-color: var(--cta);
+  text-decoration: none;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+ol {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+footer p {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.HeroSection {
+  min-height: 70vh;
+  margin: 1rem;
+}
+
+.HeroSection p {
+  max-width: 40ch;
+}
+
+.IntroP {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.DateTime {
+  margin: 1rem auto;
+  padding: 0;
+  width: 18rem;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
