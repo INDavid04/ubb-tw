@@ -1,5 +1,4 @@
 window.onload = function(){
-    
   document.body.addEventListener("keydown", keyDownListener);
   let print = document.createElement('div');
   print.setAttribute("id","print");
@@ -92,4 +91,3 @@ window.onload = function(){
     document.getElementById("print").innerHTML = localStorage.getItem("nodots");
   }   
 }
-
